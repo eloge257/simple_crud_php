@@ -23,3 +23,11 @@ h1{
     background-color: rgb(144, 14, 107);
     color: rgb(235, 200, 200);
 }
+.footer-link{
+    margin-top: 20px;
+    padding: 20px;
+    float: right;
+    font-size: 10px;
+    text-decoration: none;
+    color: blue;
+}
