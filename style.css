@@ -1,5 +1,5 @@
 .card{
-    background-color: aqua;
+    background-color: rgb(192, 196, 193);
     margin: 10vw;
     height: 15vw;
     border-radius: 15px;
@@ -7,4 +7,15 @@
 h1{
     text-align: center;
     padding: 30px;
+}
+
+.button{
+    text-align: center;
+}
+.button a{
+    background-color: rgba(102, 35, 110, 0.194);
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 20px;
 }
