@@ -1,0 +1,10 @@
+.card{
+    background-color: aqua;
+    margin: 10vw;
+    height: 15vw;
+    border-radius: 15px;
+}
+h1{
+    text-align: center;
+    padding: 30px;
+}
