@@ -12,7 +12,7 @@
         <h1>Code in my mind</h1>
 
         <div class="button">
-            <a href="">
+            <a href="app/liste/ListeCitoyen.php">
                 Get started
             </a>
         </div>
