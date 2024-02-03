@@ -5,6 +5,6 @@
  * Date le 03/02/2024
  */
 
-
+  $bdd = new PDO("mysql:host=localhost;dbname=citoyen","root","");
 
 ?>
