@@ -8,6 +8,14 @@
 <body>
 
         <h1>Liste</h1>
+        <?php
+        //include file
+        include("../../database/database.php");
+
+        // $sql_query="SELECT * FROM citoyen";
+        // $result=$conn->query($sql_query);
+
+        ?>
     
 </body>
 </html>
