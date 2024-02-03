@@ -13,9 +13,13 @@ h1{
     text-align: center;
 }
 .button a{
-    background-color: rgba(102, 35, 110, 0.194);
+    background-color: rgb(235, 45, 127);
     color: #fff;
     padding: 20px;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 5px;
+}
+.button a:hover{
+    background-color: rgb(144, 14, 107);
+    color: rgb(235, 200, 200);
 }
