@@ -36,15 +36,18 @@
 
         <h1>Liste des citoyens</h1>
 
-        <div class="search">
-            <form method="GET" action="">
-                <input type="text" name="search" class="input-search">
-                <button type="submit" class="button-search">Recherche</button>
-            </form>
-        </div>
+        <div class="header-liste">
+            <div class="search">
+                <form method="GET" action="">
+                    <input type="text" name="search" class="input-search">
+                    <button type="submit" class="button-search">Recherche</button>
+                </form>
+            </div>
 
-        <a href="../insert/Addcitoyen.php" class="btn-table">Nouveau</a>
-    
+            <a href="../insert/Addcitoyen.php" class="btn-table">Nouveau</a>
+        
+        </div>
+     
     <table class="my-table">
         <thead>
             <tr>

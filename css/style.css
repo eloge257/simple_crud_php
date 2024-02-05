@@ -101,6 +101,24 @@ h1{
         font-weight: bold;
         font-size: 18px;
     }
+    .header-liste{
+        display: flex;
+        justify-content: space-between;
+    }
+    .input-search {
+        width: 20vw;
+        height: 30px;
+    }
+    .button-search{
+        width: 100px;
+        height: 35px;
+        background-color: #f70897;
+        border: none;
+        border-radius: 3px;
+        color: #ccc;
+        font-weight: bold;
+        font-size: 10px;
+    }
 
     .form-error{
         margin-left: 110px;
