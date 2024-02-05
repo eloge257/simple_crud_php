@@ -25,6 +25,7 @@ $countries=$conn->query($sql_query);
               <div>
                   <label for="">Nom</label>
                  <input type="text" name="NOM" id="">
+                 <span><?= @$error_nom ?></span>
               </div>
               <div>
                   <label for="">Prenom</label>

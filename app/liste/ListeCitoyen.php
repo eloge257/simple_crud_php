@@ -2,7 +2,7 @@
         //include file
         include("../../database/database.php");
 
-        $sql_query="SELECT * FROM citoyen";
+        $sql_query="SELECT * FROM citoyen LEFT JOIN pays on pays.id=citoyen.nationalite";
         $citoyens=$conn->query($sql_query);
 
         ?>
@@ -38,13 +38,10 @@
                 <td><?=  $citoyen['nom'] ?></td>
                 <td><?=  $citoyen['prenom'] ?></td>
                 <td><?=  $citoyen['adresse'] ?></td>
-                <td><?=  $citoyen['genre'] ?></td>
-                <td><?=  $citoyen['nationalite'] ?></td>
+                <td><?php echo $citoyen['genre']==1 ?  'Masculin'    :  'Feminim'; ?></td>
+                <td><?=  $citoyen['name'] ?></td>
                 <td><?=  $citoyen['telephone'] ?></td>
-
               </tr>
-
-
             <?php  } ?>
         </tbody>
     </table>
