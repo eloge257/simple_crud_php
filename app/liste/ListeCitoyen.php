@@ -43,6 +43,10 @@
                 <td><?php echo $citoyen['genre']==1 ?  'Masculin'    :  'Feminim'; ?></td>
                 <td><?=  $citoyen['name'] ?></td>
                 <td><?=  $citoyen['telephone'] ?></td>
+                <td>
+                    <a href="">Supprimer</a>
+                    <a href="">Modifier</a>
+                </td>
               </tr>
             <?php  } ?>
         </tbody>
