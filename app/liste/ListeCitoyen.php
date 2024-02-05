@@ -19,7 +19,7 @@
 
         <h1>Liste des citoyes</h1>
 
-        <a href="../insert/Addcitoyen.php">Nouveau</a>
+        <a href="../insert/Addcitoyen.php" class="btn-table">Nouveau</a>
     
     <table class="my-table">
         <thead>

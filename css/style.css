@@ -31,6 +31,7 @@ h1{
     text-decoration: none;
     color: blue;
 }
+/* -------------------------------Begin style form------------------------------------------------ */
 .panel{
     background-color: #f3f0f0;
     width: 50vw;
@@ -103,7 +104,7 @@ h1{
         margin-left: 110px;
         color:red;
     }
-
+/* -----------------------end style form------------------------------------------------------------------ */
 
 
     /* -----------------------------Begin style table---------------------------------------------------------- */
@@ -132,8 +133,21 @@ h1{
     }
 
     .my-table tr:hover {
-        background-color: #eaf6ff;
+        background-color: #f20397;
     }
 
 
     /*------------------------------end style table---------------------------------------------------------------------------- */
+
+    /* -----------------begin style button on the table------------------------------- */
+.btn-table{
+    background-color: #f70897;
+    padding: 10px;
+    text-decoration: none;
+    float: right;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+    /* ----------------------------end style button on the table------------------------------------------------------ */
