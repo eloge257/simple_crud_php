@@ -28,7 +28,7 @@
               </div>
               <div>
                   <label for="">Genre</label>
-                  <select name="" id="" disabled="disabled">
+                  <select name="GENRE" id="" disabled="disabled">
                       <option>--genre--</option>
                       <option value="1">Masculin</option>
                       <option value="2">Feminim</option>
@@ -36,7 +36,12 @@
               </div>
               <div>
                   <label for="">Nationalite</label>
-                 <input type="text" name="NOM" id="">
+                  <select name="NATIONALITE" id="">
+                     <option>--Nationalite</option>
+                     <?php  foreach($countries as $country) { ?>
+                        <option value="<?= $country['id']?>"><?= $country['name'] ?></option>
+                    <?php } ?>
+                  </select>
               </div>
             </form>
         </div>
