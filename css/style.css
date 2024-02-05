@@ -98,3 +98,8 @@ h1{
         font-weight: bold;
         font-size: 18px;
     }
+
+    .form-error{
+        margin-left: 110px;
+        color:red;
+    }

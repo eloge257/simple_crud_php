@@ -39,13 +39,13 @@ unset($_SESSION['error_phone']);
             <form action="../traitement/insert.php" method="POST">
               <div class="form-row">
                   <label for="">Nom</label>
-                 <input type="text" name="NOM" id="">
-                 <span style="color:red;"><?= $error_nom ?></span>
+                 <input type="text" name="NOM" id=""><br>
+                 <span  class="form-error"><?= $error_nom ?></span>
               </div>
               <div class="form-row">
                   <label for="">Prenom</label>
-                 <input type="text" name="PRENOM" id="">
-                 <span style="color:red"><?= $error_prenom ?></span>
+                 <input type="text" name="PRENOM" id=""><br>
+                 <span  class="form-error"><?= $error_prenom ?></span>
               </div>
               <div class="form-row">
                   <label for="">Adresse</label>
@@ -70,8 +70,8 @@ unset($_SESSION['error_phone']);
               </div>
               <div class="form-row">
                 <label for="">Telephone</label>
-                <input type="text" name="TELEPHONE">
-                <span style="color:red"><?= $error_phone ?></span>
+                <input type="text" name="TELEPHONE"> <br>
+                <span  class="form-error"><?= $error_phone ?></span>
               </div>
               <div class="form-button">
                 <button name="envoyer">Envoyer</button>
