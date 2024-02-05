@@ -30,6 +30,7 @@
                 <th>Genre</th>
                 <th>Nationalité</th>
                 <th>Téléphone </th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
