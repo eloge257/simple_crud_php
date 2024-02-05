@@ -67,11 +67,12 @@ h1{
     }
 
     .form-row input,
-    .form-row select {
+    .form-row select,
+    .input-search {
         width: 30vw;
         height: 35px;
     }
-    .form-row input,select{
+    .form-row input,select,.input-search{
         /* border: none; */
         border: 1px solid #ccc;
         border-radius: 6px;
@@ -81,10 +82,11 @@ h1{
         width: 30.5vw;
         height: 35px;
     }
-    .form-row input:focus,select:focus {
+    .form-row input:focus,select:focus,.input-search:focus {
         border: 2px solid rgb(230, 0, 142);
         outline: none; /* Pour supprimer la bordure par défaut du navigateur */
     }
+
     .form-button{
         text-align: center;
         /* width: 10px; */
