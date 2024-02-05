@@ -4,12 +4,8 @@
  * Dans cette fichier nous mettons les codes qui nous permet de connecte notre application avec la base de donnees
  * Date le 03/02/2024
  */
-// try {
-//     //code...
-//     $bdd = new PDO("mysql:host=localhost;dbname=citoyen","root","");
-// } catch ($message) {
-//     echo $message
-// }
+//demarrer la session une fois pour toute
+session_start();
 $servername = "localhost"; // Adresse du serveur MySQL
 $username = "root"; // Nom d'utilisateur MySQL
 $password = ""; // Mot de passe MySQL

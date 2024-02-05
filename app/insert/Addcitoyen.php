@@ -3,10 +3,17 @@ include("../../database/database.php");
 $sql_query="SELECT * FROM pays ORDER BY name ASC";
 $countries=$conn->query($sql_query);
 
-$error_nom = isset($_GET['error_nom']) ? $_GET['error_nom'] : "";
-$error_prenom = isset($_GET['error_prenom']) ? $_GET['error_prenom'] : "";
+//on recupere les messages comme ca quand nous avons envoyer les messages dans le url
+// $error_nom = isset($_GET['error_nom']) ? $_GET['error_nom'] : "";
+// $error_prenom = isset($_GET['error_prenom']) ? $_GET['error_prenom'] : "";
 
+//quand on utilise les sessions on recupere les messages comme ca
+$error_nom = isset($_SESSION['error_nom']) ? $_SESSION['error_nom'] : "";
+$error_prenom = isset($_SESSION['error_prenom']) ? $_SESSION['error_prenom'] : "";
 
+// Effacer les erreurs de la session
+unset($_SESSION['error_nom']);
+unset($_SESSION['error_prenom']);
 
 
 ?>
