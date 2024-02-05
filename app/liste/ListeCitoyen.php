@@ -11,12 +11,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../../public/profile.png" type="image/png">
+    <title>Simple CRUD with PHP</title>
 </head>
 <body>
 
         <h1>Liste</h1>
 
+        <a href="../insert/Addcitoyen.php">Add</a>
     
     <table>
         <thead>
