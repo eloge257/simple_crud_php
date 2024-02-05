@@ -3,6 +3,7 @@ include("../../database/database.php");
 $sql_query="SELECT * FROM pays ORDER BY name ASC";
 $countries=$conn->query($sql_query);
 
+
 // requete pour remplir la form
 if (isset($_GET['id'])) {
     $idcitoyen=$_GET['id'];
@@ -37,15 +38,15 @@ if (isset($_GET['id'])) {
             <h1>Editer citoyen</h1>
         </div>
         <div class="card-contenu">
-            <form action="../traitement/insert.php" method="POST">
-                <input type="hidden" value="<?= $idcitoyen ?>">
+            <form action="../traitement/update.php" method="POST">
+                <input type="hidden" value="<?= $idcitoyen ?>" name="idcitoyen">
               <div class="form-row">
                   <label for="">Nom</label>
-                 <input type="text" name="NOM" value="<?= $nom ?>" id=""><br>
+                 <input type="text" name="NOM" value="<?= $nom ?>" id="">
               </div>
               <div class="form-row">
                   <label for="">Prenom</label>
-                 <input type="text" name="PRENOM" value="<?= $prenom ?>" id=""><br>
+                 <input type="text" name="PRENOM" value="<?= $prenom ?>" id="">
               </div>
               <div class="form-row">
                   <label for="">Adresse</label>
@@ -75,10 +76,10 @@ if (isset($_GET['id'])) {
               </div>
               <div class="form-row">
                 <label for="">Telephone</label>
-                <input type="text" name="TELEPHONE" value="<?= $telephone ?>"> <br>
+                <input type="text" name="TELEPHONE" value="<?= $telephone ?>"> 
               </div>
               <div class="form-button">
-                <button name="envoyer">Modifier</button>
+                <button name="update">Modifier</button>
               </div>
             </form>
         </div>
