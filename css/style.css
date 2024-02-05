@@ -31,10 +31,22 @@ h1{
     text-decoration: none;
     color: blue;
 }
+.panel{
+    background-color: #f3f0f0;
+    width: 50vw;
+    margin-left: 25vw;
+    height: 40vw;
+}
+
 
 .card-header{
-    background-color: #e0dbdb;
-    border-radius: 20px;
+    background-color: #f70897;
+    border-radius: 0px 0px 20px 20px;
+    color: #ccc;
+}
+.card-contenu{
+    margin: 40px;
+    margin-bottom: 30px;
 }
 
     .form-row {
@@ -58,10 +70,10 @@ h1{
         width: 30vw;
         height: 35px;
     }
-    .form-row input{
+    .form-row input,select{
         /* border: none; */
         border: 1px solid #ccc;
-        border-radius: 1px;
+        border-radius: 6px;
         outline: none;
     }
     .form-row select {
@@ -71,4 +83,18 @@ h1{
     .form-row input:focus,select:focus {
         border: 2px solid rgb(230, 0, 142);
         outline: none; /* Pour supprimer la bordure par défaut du navigateur */
+    }
+    .form-button{
+        text-align: center;
+        /* width: 10px; */
+    }
+    .form-button button{
+        width: 300px;
+        height: 35px;
+        background-color: #f70897;
+        border: none;
+        border-radius: 3px;
+        color: #ccc;
+        font-weight: bold;
+        font-size: 18px;
     }

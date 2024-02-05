@@ -73,7 +73,7 @@ unset($_SESSION['error_phone']);
                 <input type="text" name="TELEPHONE">
                 <span style="color:red"><?= $error_phone ?></span>
               </div>
-              <div>
+              <div class="form-button">
                 <button name="envoyer">Envoyer</button>
               </div>
             </form>
