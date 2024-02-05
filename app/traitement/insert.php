@@ -25,6 +25,8 @@
     // }
 
     $regex="/^[A-Za-z]+$/";
+    $regexPhone="/^[0-9]+$/";
+
     //quand tu veux envoyer les donnees sur un autre page via les sessions 
     if (empty($nom)) {
         $_SESSION['error_nom'] = "Champ obligatoire";
@@ -32,6 +34,9 @@
     if (!preg_match($regex, $nom)) {
         $_SESSION['error_nom'] = "Nom est invalide(".$nom.")";
 
+    }
+    if (!preg_match($regexPhone,$telephone)) {
+        $_SESSION['error_phone'] = "Telephone invalide";
     }
     
     if (empty($prenom)) {

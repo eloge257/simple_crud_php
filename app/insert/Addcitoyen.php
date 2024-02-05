@@ -10,10 +10,13 @@ $countries=$conn->query($sql_query);
 //quand on utilise les sessions on recupere les messages comme ca
 $error_nom = isset($_SESSION['error_nom']) ? $_SESSION['error_nom'] : "";
 $error_prenom = isset($_SESSION['error_prenom']) ? $_SESSION['error_prenom'] : "";
+$error_phone = isset($_SESSION['error_phone']) ? $_SESSION['error_phone'] : "";
+
 
 // Effacer les erreurs de la session
 unset($_SESSION['error_nom']);
 unset($_SESSION['error_prenom']);
+unset($_SESSION['error_phone']);
 
 
 ?>
@@ -67,6 +70,7 @@ unset($_SESSION['error_prenom']);
               <div>
                 <label for="">Telephone</label>
                 <input type="text" name="TELEPHONE">
+                <span style="color:red"><?= $error_phone ?></span>
               </div>
               <div>
                 <button name="envoyer">Envoyer</button>
