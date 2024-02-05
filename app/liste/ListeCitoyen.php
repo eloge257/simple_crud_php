@@ -2,7 +2,7 @@
         //include file
         include("../../database/database.php");
 
-        $itemsPerPage = 10; // Nombre d'éléments à afficher par page
+        $itemsPerPage = 5; // Nombre d'éléments à afficher par page
         $page = isset($_GET['page']) ? $_GET['page'] : 1; // Numéro de page actuel
         $start = ($page - 1) * $itemsPerPage; // Calculer le nombre d'éléments à sauter
                 // Vérifier si une recherche a été soumise
