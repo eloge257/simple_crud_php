@@ -13,22 +13,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../public/profile.png" type="image/png">
     <title>Simple CRUD with PHP</title>
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
-        <h1>Liste</h1>
+        <h1>Liste des citoyes</h1>
 
-        <a href="../insert/Addcitoyen.php">Add</a>
+        <a href="../insert/Addcitoyen.php">Nouveau</a>
     
-    <table>
+    <table class="my-table">
         <thead>
             <tr>
                 <th>Nom</th>
-                <th>Prenom</th>
+                <th>Prénom</th>
                 <th>Adresse</th>
                 <th>Genre</th>
-                <th>Nationalite</th>
-                <th>Telephone</th>
+                <th>Nationalité</th>
+                <th>Téléphone </th>
             </tr>
         </thead>
         <tbody>
