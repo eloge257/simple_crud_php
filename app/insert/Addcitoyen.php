@@ -34,6 +34,7 @@ unset($_SESSION['error_phone']);
     <div class="panel">
         <div class="card-header">
             <h1>Add citoyen</h1>
+
         </div>
         <div class="card-contenu">
             <form action="../traitement/insert.php" method="POST">
@@ -75,6 +76,7 @@ unset($_SESSION['error_phone']);
               </div>
               <div class="form-button">
                 <button name="envoyer">Envoyer</button>
+                <a href="../liste/ListeCitoyen.php">Retour</a>
               </div>
             </form>
         </div>

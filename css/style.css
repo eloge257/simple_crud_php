@@ -136,6 +136,7 @@ h1{
 
     .my-table tr:hover {
         background-color: #ff84d0;
+        cursor:grabbing;
     }
 
 
