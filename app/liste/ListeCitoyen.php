@@ -2,25 +2,36 @@
         //include file
         include("../../database/database.php");
 
-        // $sql_query="SELECT * FROM citoyen LEFT JOIN pays on pays.id=citoyen.nationalite";
-        // $citoyens=$conn->query($sql_query);
-
+        $itemsPerPage = 10; // Nombre d'éléments à afficher par page
+        $page = isset($_GET['page']) ? $_GET['page'] : 1; // Numéro de page actuel
+        $start = ($page - 1) * $itemsPerPage; // Calculer le nombre d'éléments à sauter
                 // Vérifier si une recherche a été soumise
         if (isset($_GET['search'])) {
             // Récupérer la valeur de l'input de recherche
             $search = $_GET['search'];
 
             // Effectuer une requête à la base de données pour récupérer les résultats correspondants à la recherche
-            $sql_query = "SELECT * FROM citoyen LEFT JOIN pays ON pays.id = citoyen.nationalite WHERE nom LIKE '%$search%' OR prenom LIKE '%$search%' OR adresse LIKE '%$search%' OR telephone LIKE '%$search%'";
+            $sql_query = "SELECT * FROM citoyen LEFT JOIN pays ON pays.id = citoyen.nationalite WHERE nom LIKE '%$search%' OR prenom LIKE '%$search%' OR adresse LIKE '%$search%' OR telephone LIKE '%$search%' LIMIT $start, $itemsPerPage ";
             // Vous pouvez modifier la requête selon les champs de votre table et les critères de recherche souhaités
 
             // Exécuter la requête
             $citoyens = $conn->query($sql_query);
         } else {
             // Si aucune recherche n'est soumise, afficher tous les citoyens
-            $sql_query = "SELECT * FROM citoyen LEFT JOIN pays ON pays.id = citoyen.nationalite";
+            $sql_query = "SELECT * FROM citoyen LEFT JOIN pays ON pays.id = citoyen.nationalite LIMIT $start, $itemsPerPage";
             $citoyens = $conn->query($sql_query);
         }
+        $sql_count = "SELECT COUNT(*) as total FROM citoyen";
+        $count_result = $conn->query($sql_count);
+        $totalItems = $count_result->fetch(PDO::FETCH_ASSOC)['total'];
+        $totalPages = ceil($totalItems / $itemsPerPage); // Calculer le nombre total de pages
+
+        // Afficher les liens vers les différentes pages
+        $pagination ="<div class='pagination'>";
+        for ($i = 1; $i <= $totalPages; $i++) {
+            $pagination .="<a href='?page=$i'>$i</a>";
+        }
+        $pagination .="</div>";
 
         ?>
 <!DOCTYPE html>
@@ -78,5 +89,15 @@
             <?php  } ?>
         </tbody>
     </table>
+
+    <div class="pagination">
+        <?php
+       // for ($i = 1; $i <= $totalPages; $i++) {
+            // echo "<a href=>$i</a>";
+             ?>
+        <a href="<?//= $page=$i; ?>" class="item-pagination"><?//= $i ?></a>
+        <?php   //  }  ?>
+        <?= $pagination ?>
+    </div>
 </body>
 </html>

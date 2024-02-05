@@ -133,7 +133,6 @@ h1{
     .my-table {
         width: 100%;
         border-collapse: collapse;
-        margin-bottom: 200px;
     }
 
     .my-table th,
@@ -187,3 +186,17 @@ h1{
 
 
 
+/* pagination */
+
+.pagination{
+    margin: 20px;
+    float: right;
+    text-decoration: none;
+}
+.item-pagination{
+    margin: 20px;
+    float: right;
+}
+
+
+/* end  */
