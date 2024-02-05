@@ -80,6 +80,8 @@ if (isset($_GET['id'])) {
               </div>
               <div class="form-button">
                 <button name="update">Modifier</button>
+                <a href="../liste/ListeCitoyen.php">Retour</a>
+
               </div>
             </form>
         </div>
