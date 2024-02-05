@@ -26,31 +26,32 @@ unset($_SESSION['error_phone']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../public/profile.png" type="image/png">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Simple CRUD with PHP</title>
 </head>
 <body>
 
-    <div class="card">
+    <div class="panel">
         <div class="card-header">
             <h1>Add citoyen</h1>
         </div>
         <div class="card-contenu">
             <form action="../traitement/insert.php" method="POST">
-              <div>
+              <div class="form-row">
                   <label for="">Nom</label>
                  <input type="text" name="NOM" id="">
                  <span style="color:red;"><?= $error_nom ?></span>
               </div>
-              <div>
+              <div class="form-row">
                   <label for="">Prenom</label>
                  <input type="text" name="PRENOM" id="">
                  <span style="color:red"><?= $error_prenom ?></span>
               </div>
-              <div>
+              <div class="form-row">
                   <label for="">Adresse</label>
                  <input type="text" name="ADRESSE" id="">
               </div>
-              <div>
+              <div class="form-row">
                   <label for="">Genre</label>
                   <select name="GENRE" >
                       <option>--genre--</option>
@@ -58,7 +59,7 @@ unset($_SESSION['error_phone']);
                       <option value="2">Feminim</option>
                   </select>
               </div>
-              <div>
+              <div class="form-row">
                   <label for="">Nationalite</label>
                   <select name="NATIONALITE" id="">
                      <option>--Nationalite</option>
@@ -67,7 +68,7 @@ unset($_SESSION['error_phone']);
                     <?php } ?>
                   </select>
               </div>
-              <div>
+              <div class="form-row">
                 <label for="">Telephone</label>
                 <input type="text" name="TELEPHONE">
                 <span style="color:red"><?= $error_phone ?></span>

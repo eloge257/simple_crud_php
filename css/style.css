@@ -32,7 +32,43 @@ h1{
     color: blue;
 }
 
-
-input{
-    width: 20px;
+.card-header{
+    background-color: #e0dbdb;
+    border-radius: 20px;
 }
+
+    .form-row {
+        margin-bottom: 10px;
+    }
+
+    .form-row label,
+    .form-row input,
+    .form-row select
+     {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .form-row label {
+        width: 100px;
+    }
+
+    .form-row input,
+    .form-row select {
+        width: 30vw;
+        height: 35px;
+    }
+    .form-row input{
+        /* border: none; */
+        border: 1px solid #ccc;
+        border-radius: 1px;
+        outline: none;
+    }
+    .form-row select {
+        width: 30.5vw;
+        height: 35px;
+    }
+    .form-row input:focus,select:focus {
+        border: 2px solid rgb(230, 0, 142);
+        outline: none; /* Pour supprimer la bordure par défaut du navigateur */
+    }
