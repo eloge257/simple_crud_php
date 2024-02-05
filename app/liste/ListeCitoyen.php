@@ -17,7 +17,7 @@
 </head>
 <body>
 
-        <h1>Liste des citoyes</h1>
+        <h1>Liste des citoyens</h1>
 
         <a href="../insert/Addcitoyen.php" class="btn-table">Nouveau</a>
     
