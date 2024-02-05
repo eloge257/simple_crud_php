@@ -45,7 +45,7 @@
                 <td><?=  $citoyen['telephone'] ?></td>
                 <td>
                     <a href="../traitement/delete.php?id=<?= $citoyen['idcitoyen'] ?>" class="btn-action">Supprimer</a>
-                    <a href="" class="btn-action">Modifier</a>
+                    <a href="../update/EditCitoyen.php?id=<?= $citoyen['idcitoyen'] ?>" class="btn-action">Modifier</a>
                 </td>
               </tr>
             <?php  } ?>

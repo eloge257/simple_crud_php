@@ -3,6 +3,21 @@ include("../../database/database.php");
 $sql_query="SELECT * FROM pays ORDER BY name ASC";
 $countries=$conn->query($sql_query);
 
+// requete pour remplir la form
+if (isset($_GET['id'])) {
+    $idcitoyen=$_GET['id'];
+    $get_row=$conn->prepare("SELECT * FROM citoyen where idcitoyen=?");
+    $get_row->execute([$idcitoyen]);
+    $row= $get_row->fetch();
+    $idcitoyen=$row['idcitoyen'];
+    $nom= $row['nom'];
+    $prenom= $row['prenom'];
+    $adresse= $row['adresse'];
+    $genre= $row['genre'];
+    $nationalite=$row['nationalite'];
+    $telephone=$row['telephone'];
+
+}
 
 
 ?>
@@ -23,38 +38,44 @@ $countries=$conn->query($sql_query);
         </div>
         <div class="card-contenu">
             <form action="../traitement/insert.php" method="POST">
+                <input type="hidden" value="<?= $idcitoyen ?>">
               <div class="form-row">
                   <label for="">Nom</label>
-                 <input type="text" name="NOM" id=""><br>
+                 <input type="text" name="NOM" value="<?= $nom ?>" id=""><br>
               </div>
               <div class="form-row">
                   <label for="">Prenom</label>
-                 <input type="text" name="PRENOM" id=""><br>
+                 <input type="text" name="PRENOM" value="<?= $prenom ?>" id=""><br>
               </div>
               <div class="form-row">
                   <label for="">Adresse</label>
-                 <input type="text" name="ADRESSE" id="">
+                 <input type="text" name="ADRESSE" value="<?= $adresse ?>" id="">
               </div>
               <div class="form-row">
                   <label for="">Genre</label>
                   <select name="GENRE" >
                       <option>--genre--</option>
-                      <option value="1">Masculin</option>
-                      <option value="2">Feminim</option>
+                      <option value="1" <?php if ($genre==1) { echo "selected";   }  ?>>Masculin</option>
+                      <option value="2" <?php if ($genre==2) { echo "selected";   }  ?>>Feminim</option>
                   </select>
               </div>
               <div class="form-row">
                   <label for="">Nationalite</label>
                   <select name="NATIONALITE" id="">
                      <option>--Nationalite</option>
-                     <?php  foreach($countries as $country) { ?>
+                     <?php  foreach($countries as $country) { 
+                        if ($country['id'] == $nationalite) {
+                        ?>
+                        <option value="<?= $country['id']?>" selected><?= $country['name'] ?></option>
+                    <?php } else {  ?>
                         <option value="<?= $country['id']?>"><?= $country['name'] ?></option>
-                    <?php } ?>
+
+                    <?php } }?>
                   </select>
               </div>
               <div class="form-row">
                 <label for="">Telephone</label>
-                <input type="text" name="TELEPHONE"> <br>
+                <input type="text" name="TELEPHONE" value="<?= $telephone ?>"> <br>
               </div>
               <div class="form-button">
                 <button name="envoyer">Modifier</button>
