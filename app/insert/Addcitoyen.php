@@ -1,3 +1,11 @@
+<?php
+include("../../database/database.php");
+$sql_query="SELECT * FROM pays ORDER BY name ASC";
+$countries=$conn->query($sql_query);
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +21,7 @@
             <h1>Add citoyen</h1>
         </div>
         <div class="card-contenu">
-            <form action="" method="POST">
+            <form action="../traitement/insert.php" method="POST">
               <div>
                   <label for="">Nom</label>
                  <input type="text" name="NOM" id="">
@@ -28,7 +36,7 @@
               </div>
               <div>
                   <label for="">Genre</label>
-                  <select name="GENRE" id="" disabled="disabled">
+                  <select name="GENRE" >
                       <option>--genre--</option>
                       <option value="1">Masculin</option>
                       <option value="2">Feminim</option>
@@ -42,6 +50,13 @@
                         <option value="<?= $country['id']?>"><?= $country['name'] ?></option>
                     <?php } ?>
                   </select>
+              </div>
+              <div>
+                <label for="">Telephone</label>
+                <input type="text" name="TELEPHONE">
+              </div>
+              <div>
+                <button name="envoyer">Envoyer</button>
               </div>
             </form>
         </div>
