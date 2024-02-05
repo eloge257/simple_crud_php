@@ -3,6 +3,10 @@ include("../../database/database.php");
 $sql_query="SELECT * FROM pays ORDER BY name ASC";
 $countries=$conn->query($sql_query);
 
+$error_nom = isset($_GET['error_nom']) ? $_GET['error_nom'] : "";
+$error_prenom = isset($_GET['error_prenom']) ? $_GET['error_prenom'] : "";
+
+
 
 
 ?>
@@ -25,11 +29,12 @@ $countries=$conn->query($sql_query);
               <div>
                   <label for="">Nom</label>
                  <input type="text" name="NOM" id="">
-                 <span><?= @$error_nom ?></span>
+                 <span style="color:red;"><?= $error_nom ?></span>
               </div>
               <div>
                   <label for="">Prenom</label>
                  <input type="text" name="PRENOM" id="">
+                 <span style="color:red"><?= $error_prenom ?></span>
               </div>
               <div>
                   <label for="">Adresse</label>
