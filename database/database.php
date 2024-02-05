@@ -25,7 +25,8 @@ $dbname = "gestioncitoyen"; // Nom de la base de données
         // Effectuer des opérations sur la base de données...
         
         // Fermer la connexion
-        $conn = null;
+        // $conn = null;
+
     } catch(PDOException $e) {
         echo "La connexion a échoué : " . $e->getMessage();
     }
