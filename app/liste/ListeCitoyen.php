@@ -25,6 +25,7 @@
             <tr>
                 <th>Nom</th>
                 <th>Prenom</th>
+                <th>Adresse</th>
                 <th>Genre</th>
                 <th>Nationalite</th>
                 <th>Telephone</th>
@@ -39,6 +40,7 @@
                 <td><?=  $citoyen['adresse'] ?></td>
                 <td><?=  $citoyen['genre'] ?></td>
                 <td><?=  $citoyen['nationalite'] ?></td>
+                <td><?=  $citoyen['telephone'] ?></td>
 
               </tr>
 
